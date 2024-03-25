@@ -1,6 +1,7 @@
 import { Route, Routes,Redirect } from "react-router-dom";
 import Rules from "./Rules";
 import Misery from "./Misery";
+import Missions from "./Missions";
 
 function Main() {
   return (
@@ -8,7 +9,8 @@ function Main() {
       <header></header>
       <div>
      <Routes>
-      <Route path="/" element={<Misery/>}/>
+      <Route path="/" element={<Missions/>}/>
+      
      </Routes>
       </div>
     </div>
