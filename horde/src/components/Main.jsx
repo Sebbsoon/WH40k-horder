@@ -1,30 +1,17 @@
-import { Layout, Menu } from "antd";
-import Sider from "antd/es/layout/Sider";
-import { Content, Footer, Header } from "antd/es/layout/layout";
-const items = [
-  { key: 1, label: `Rules` },
-  { key: 2, label: "" },
-];
+import { Route, Routes,Redirect } from "react-router-dom";
+import Rules from "./Rules";
+import Misery from "./Misery";
+
 function Main() {
   return (
-    <>
-      <Layout>
-        <Header>
-          <Menu
-            theme="dark"
-            mode="horizontal"
-            defaultSelectedKeys={["1"]}
-            items={items}
-          ></Menu>
-        </Header>
-        <Layout>
-          <Sider></Sider>
-          <Content></Content>
-          <Sider></Sider>
-        </Layout>
-        <Footer></Footer>
-      </Layout>
-    </>
+    <div>
+      <header></header>
+      <div>
+     <Routes>
+      <Route path="/" element={<Misery/>}/>
+     </Routes>
+      </div>
+    </div>
   );
 }
 export default Main;
